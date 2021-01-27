@@ -13,19 +13,35 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+  <script defer src="app.js"></script>  
 </head>
 <body>
 
-  We're launching soon
-
-  Days
-  Hours
-  Minutes
-  Seconds
+  <main>
+    We're launching soon
+    <div v-if="mustShow" id="counter">
+      <div>
+        {{days}} days
+      </div>
+      <div>
+        {{hours}} hours
+      </div>
+      <div>
+        {{minutes}} minutes
+      </div>
+      <div>
+        {{seconds}} seconds
+      </div>
+    </div>
+    <button v-else @click="toggleShow"> Start </button>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main>
+  <script src="https://unpkg.com/vue@next"></script>
 </body>
 </html>
