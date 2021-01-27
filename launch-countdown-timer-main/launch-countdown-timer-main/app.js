@@ -8,12 +8,24 @@ const app = Vue.createApp({
           date: undefined,
           finalDate: undefined,
           timeLeft: undefined,
-          mustShow: false,
-          seconds: 0,
-          minutes: 0,
-          hours: 1,
-          days: 1
+          seconds: undefined,
+          minutes: undefined,
+          hours: undefined,
+          days: undefined
       }
+  },
+  created(){
+      this.finalDate = new Date("2021-01-30 12:12:12")
+      this.date = new Date()
+      this.timeLeft = this.finalDate - this.date
+      setInterval(
+        () => {
+            if(this.timeLeft != 0){
+                this.timeLeft -= 1000
+                }
+            this.setFormat(this.timeLeft)
+
+        }, 1000)
   },
   methods:{
     setFormat(timeLeft) {
@@ -21,36 +33,17 @@ const app = Vue.createApp({
 
         this.minutes = Math.floor(this.seconds/60)
         this.seconds = this.seconds % 60
-
-        
+       
         this.hours = Math.floor(this.minutes/60)
         this.minutes =  this.minutes % 60
-
-        
+      
         this.days = Math.floor(this.hours/24)
         this.hours = this.hours % 24
 
-        console.log("seconds =", this.seconds)
-        console.log("minuts=", this.minutes)
-        console.log("hours=", this.hours)
-        console.log("days=", this.days)
         
     },
     toggleShow(){
         this.mustShow = !this.mustShow
-        this.date = new Date()
-        this.finalDate = new Date("2021-01-30 12:12:12");
-        this.timeLeft = this.finalDate - this.date
-        console.log(this.timeLeft)
-
-        setInterval(
-            () => {
-                if(this.timeLeft != 0){
-                    this.timeLeft -= 1000
-                    }
-                this.setFormat(this.timeLeft)
-
-            }, 1000)
       },
   }
 })

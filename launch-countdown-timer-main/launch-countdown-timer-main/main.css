@@ -1,0 +1,14 @@
+.card{
+    color: hsl(345, 95%, 68%);
+    border-style: none;
+    text-align: center;
+    background-color: hsl(237, 18%, 59%) ;
+}
+
+.counter{
+    margin: 10px; 
+}
+body{
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 14px;
+}
