@@ -20,7 +20,7 @@
   <script defer src="app.js"></script>  
 </head>
 <body class="d-flex flex-column justify-content-center align-items-center vh-100">
-
+  <div class="container">
   <main class="d-flex flex-column  align-items-center">
     <h1 id="title">
       We're launching soon
@@ -51,22 +51,27 @@
         <p class="subtitle">seconds</p>
       </div>
     </div>
-
-    <footer class="w-25 d-flex flex-row justify-content-between align-self">
-      <a id="facebook-icon" href="https.//www.facebook.com"><img src="./images/icon-facebook.svg" alt="fb-icon" width="40" height="40"></a>
-      <a id="pinterest-icon" href="https.//www.pinterest.com"><img src="./images/icon-pinterest.svg" alt="pinterest-icon" width="40" height="40"></a>
-      <a id="instagram-icon" href="https.//www.instagram.com"><img src="./images/icon-instagram.svg" alt="ig-icon" width="40" height="40"></a>
-    </footer>
+  </main>
+    <footer class="footer">
+    <!--class="w-25 d-flex flex-row justify-content-between align-self">-->
+      <div clas="content-footer">
+        <div class="icons-footer">
+          <a id="facebook-icon" href="https.//www.facebook.com"><img src="./images/icon-facebook.svg" alt="fb-icon" width="40" height="40"></a>
+          <a id="pinterest-icon" href="https.//www.pinterest.com"><img src="./images/icon-pinterest.svg" alt="pinterest-icon" width="40" height="40"></a>
+          <a id="instagram-icon" href="https.//www.instagram.com"><img src="./images/icon-instagram.svg" alt="ig-icon" width="40" height="40"></a>
+        </div>
   
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by Lenny Cala Casahuaylla & Sergi Justiniano Claramunt.
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="197"><defs><path id="a" d="M0 0h1440v197H0z"/></defs><g fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><g mask="url(#b)"><path fill="#211A29" d="M1440 50.205L1088.504 0 949.669 50.205 878 25.102 556 0 398.525 50.205l-95.807-25.103-51.328 16.761L45.704 0 0 17.701V160h1440z"/><path fill="#1A1823" d="M1394.296 1l94.649 69.336 50.047-49.449zM1137.282 42.576l51.328 27.76 80.6-5.426zM884 1l157.475 83.151 80.929-26.062zM351.496 1l138.835 83.151 49.321-28.526z"/><path fill="#2F2439" d="M0 84.151L351.496 1l138.835 83.151L562 42.576 884 1l157.475 83.151 95.807-41.575 51.328 27.76L1394.296 1 1440 30.317V266H0z"/></g></g></svg>
+        <p class="atributtion">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by Lenny Cala Casahuaylla & Sergi Justiniano Claramunt.</p>
+      
+      </div>
+    </footer>
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   </main>
   <!-- Bootstrap JS Bundle-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/vue@next"></script>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="197"><defs><path id="a" d="M0 0h1440v197H0z"/></defs><g fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><g mask="url(#b)"><path fill="#211A29" d="M1440 50.205L1088.504 0 949.669 50.205 878 25.102 556 0 398.525 50.205l-95.807-25.103-51.328 16.761L45.704 0 0 17.701V160h1440z"/><path fill="#1A1823" d="M1394.296 1l94.649 69.336 50.047-49.449zM1137.282 42.576l51.328 27.76 80.6-5.426zM884 1l157.475 83.151 80.929-26.062zM351.496 1l138.835 83.151 49.321-28.526z"/><path fill="#2F2439" d="M0 84.151L351.496 1l138.835 83.151L562 42.576 884 1l157.475 83.151 95.807-41.575 51.328 27.76L1394.296 1 1440 30.317V266H0z"/></g></g></svg>
+  </div>
 </body>
 </html>
