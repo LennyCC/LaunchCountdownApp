@@ -15,7 +15,7 @@ const app = Vue.createApp({
       }
   },
   created(){
-      this.finalDate = new Date("2021-01-30 12:12:12")
+      this.finalDate = new Date("2021-03-30 12:12:12")
       this.date = new Date()
       this.timeLeft = this.finalDate - this.date
       setInterval(
@@ -32,13 +32,13 @@ const app = Vue.createApp({
         this.seconds = Math.floor(timeLeft/1000)
 
         this.minutes = Math.floor(this.seconds/60)
-        this.seconds = this.seconds % 60
+        this.seconds = (this.seconds % 60).toLocaleString('en-US', {minimumIntegerDigits: 2})
        
         this.hours = Math.floor(this.minutes/60)
-        this.minutes =  this.minutes % 60
+        this.minutes =  (this.minutes % 60).toLocaleString('en-US', {minimumIntegerDigits: 2})
       
-        this.days = Math.floor(this.hours/24)
-        this.hours = this.hours % 24
+        this.days = Math.floor(this.hours/24).toLocaleString('en-US', {minimumIntegerDigits: 2})
+        this.hours = (this.hours % 24).toLocaleString('en-US', {minimumIntegerDigits: 2})
 
         
     },
