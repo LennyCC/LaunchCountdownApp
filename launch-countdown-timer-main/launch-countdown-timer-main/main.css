@@ -3,23 +3,30 @@ body{
     font-size: 14px;
     background-color:hsl(235, 16%, 14%);
     background-image: url("./images/bg-stars.svg");
-    box-sizing: border-box;
+    background-size: 100%;
+    margin: 0;
 }
 .card{
     background-color:hsl(236, 21%, 26%) ;
 
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     flex-basis: 2em;
     position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 3em;
+    font-size: 2em;
         
 }
-.flip-horizontal-bottom1 {
+.circle-1{
+    border-radius:0 50% 50% 0;
+}
+.circle-2{
+    border-radius:50% 0 0 50%;
+}
+.flip-horizontal-top1{
 	animation: flip-horizontal-bottom 1s ease-in 1s infinite backwards;
 
             margin: 10px; 
@@ -31,7 +38,7 @@ body{
             height: 1.8em;
             text-transform: uppercase;
 }
-.flip-horizontal-bottom2 {
+.flip-horizontal-top2 {
     animation: flip-horizontal-bottom 60s ease-in 1s infinite backwards;
 
             margin: 10px; 
@@ -43,9 +50,13 @@ body{
             height: 1.8em;
             text-transform: uppercase;
 }
-.flip-horizontal-bottom3 {
-	        animation: flip-horizontal-bottom 3600s ease-in 1s infinite backwards;
 
+.flip-horizontal-top {
+	-webkit-animation: flip-horizontal-top 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+	        animation: flip-horizontal-top 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+.flip-horizontal-top3 {
+    animation: flip-horizontal-top 3600s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
             margin: 10px; 
             color: hsl(345, 95%, 68%);
             border-style: none;
@@ -55,7 +66,7 @@ body{
             height: 1.8em;
             text-transform: uppercase;
 }
-.flip-horizontal-bottom4 {
+.flip-horizontal-top4 {
 	        animation: flip-horizontal-bottom 86400s ease-in 1s infinite backwards;
 
             margin: 10px; 
@@ -78,26 +89,24 @@ body{
     width: 100%;
     height: 1.8em;
     text-transform: uppercase;
-    transform:translate(-50%,-100%);
-    
-    
+    gap: 2rem;  
 }
+
 
 .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 3em;
+    gap: 3rem;
     position: relative;
     height: 100vh;
     margin:0;
+    padding: 0 1em;
 }
 
 .footer{
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 0;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: bottom;
@@ -106,7 +115,6 @@ body{
     background-image: url("./images/pattern-hills.svg");
 }
 .content-footer{
-    display: flex;
     flex-direction: column; 
     align-items: center;
     justify-content: space-between;
@@ -119,7 +127,7 @@ body{
     justify-content: center;
 }
 .footer-icons:hover {
-    filter: hue-rotate(68deg) brightness(95%);
+    filter: hue-rotate(68deg) brightness(85%);
     cursor: pointer;
 }
 h1{
@@ -134,6 +142,11 @@ h1{
 .atributtion{
     font-size: .7rem;
     color: #fff;
+    text-align: center;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+
 }
 .atributtion a{
     text-decoration: none;
@@ -142,6 +155,10 @@ h1{
 .subtittle{
     color:   hsl(237, 18%, 59%);
     text-transform: uppercase;
+    font-size: .5em;
+    line-height: 3;
+    letter-spacing: .5em;
+    position: fixed;
 
 }
 /* ----------------------------------------------
